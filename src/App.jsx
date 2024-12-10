@@ -8,11 +8,16 @@ import SigninForm from './components/SigninForm/SigninForm';
 import * as authService from './services/authService'
 
 const App = () => {
-  const [user, setUser] = useState(authService.getUser)
+  const [user, setUser] = useState(authService.getUser())
+
+  const handleSignout = () => {
+    authService.signout()
+    setUser(null)
+  }
 
   return (
     <>
-      <NavBar user={user} />
+      <NavBar user={user} handleSignout={handleSignout}/>
       <Routes>
         { user ? (
           <Route path='/' element={<Dashboard user={user}/>}/>
