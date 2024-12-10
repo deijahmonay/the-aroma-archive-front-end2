@@ -35,8 +35,17 @@ const SigninForm = () => {
     <main>
       <h1>Sign In</h1>
       <p>{message}</p>
-      <form>
-        
+      <form autoComplete="off" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="username">Username:</label>
+
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+        </div>
       </form>
     </main>
   )
