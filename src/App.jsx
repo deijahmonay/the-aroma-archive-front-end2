@@ -10,7 +10,9 @@ const App = () => {
   return (
     <>
       <NavBar user={user} />
-      <h1>Hello Perfume Lover!</h1>
+      <Routes>
+        { user ? () : ()}
+      </Routes>
     </>
   )
 }
