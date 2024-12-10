@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Dashboard from './components/Dashboard/Dashboard';
@@ -12,7 +12,8 @@ import PerfumeList from './components/PerfumeList/PerfumeList';
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
-
+  const [perfumes, setPerfumes] = useState([])
+  
   const handleSignout = () => {
     authService.signout()
     setUser(null)
