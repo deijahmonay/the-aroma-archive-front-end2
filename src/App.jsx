@@ -6,6 +6,8 @@ import Landing from './components/Landing/Landing';
 import SignupForm from './components/SignupForm/SignupForm';
 import SigninForm from './components/SigninForm/SigninForm';
 import * as authService from './services/authService'
+import * as perfumeService from './services/perfumeService'
+
 import PerfumeList from './components/PerfumeList/PerfumeList';
 
 const App = () => {
