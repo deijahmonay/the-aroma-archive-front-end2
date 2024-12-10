@@ -51,6 +51,11 @@ const getUser = () => {
   return user
 }
 
+const signout = () => {
+  localStorage.removeItem('token')
+}
+
+
 export {
-  signup, signin, getUser
+  signup, signin, getUser, signout
 };
