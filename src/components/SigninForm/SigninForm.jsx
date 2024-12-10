@@ -69,6 +69,12 @@ const SigninForm = () => {
           onChange={handleChange}
           />
         </div>
+        <div>
+          <button>Sign In</button>
+          <Link to='/'>
+          <button>Cancel</button>
+          </Link>
+        </div>
       </form>
     </main>
   )
