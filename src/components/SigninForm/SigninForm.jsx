@@ -38,13 +38,22 @@ const SigninForm = () => {
       <form autoComplete="off" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">Username:</label>
-
+          <input 
+          type="text"
+          autoComplete="off"
+          id="username"
+          value={formData.username}
+          name="username"
+          onChange={handleChange}
+          />
         </div>
         <div>
           <label htmlFor="email">Email:</label>
+          <input />
         </div>
         <div>
           <label htmlFor="password">Password:</label>
+          <input />
         </div>
       </form>
     </main>
