@@ -17,7 +17,8 @@ const App = () => {
 useEffect(() => {
   const fetchAllPerfumes = async () => {
     const perfumesData = await perfumeService.index()
-    console.log('perfumesData', perfumesData)
+    setPerfumes(perfumesData)
+    // console.log('perfumesData', perfumesData)
   }
   if(user) fetchAllPerfumes()
 }, [user])
@@ -34,7 +35,7 @@ useEffect(() => {
         { user ? (
           <>
           <Route path='/' element={<Dashboard user={user}/>}/>
-          <Route path='/perfumes' element={<PerfumeList />} />
+          <Route path='/perfumes' element={<PerfumeList perfumes={perfumes}/>} />
           </>
         ) : (
           <Route path='/' element={<Landing />}/>
