@@ -11,4 +11,12 @@ const index = async () => {
   }
 }
 
+const show = async () => {
+  try{
+
+  }catch(err) {
+    
+  }
+}
+
 export { index, }

@@ -7,6 +7,7 @@ import SignupForm from './components/SignupForm/SignupForm';
 import SigninForm from './components/SigninForm/SigninForm';
 import * as authService from './services/authService'
 import * as perfumeService from './services/perfumeService'
+import PerfumeDetails from './components/PerfumeDetails/PerfumeDetails';
 
 import PerfumeList from './components/PerfumeList/PerfumeList';
 
@@ -18,7 +19,6 @@ useEffect(() => {
   const fetchAllPerfumes = async () => {
     const perfumesData = await perfumeService.index()
     setPerfumes(perfumesData)
-    // console.log('perfumesData', perfumesData)
   }
   if(user) fetchAllPerfumes()
 }, [user])
@@ -36,6 +36,7 @@ useEffect(() => {
           <>
           <Route path='/' element={<Dashboard user={user}/>}/>
           <Route path='/perfumes' element={<PerfumeList perfumes={perfumes}/>} />
+          <Route path='/perfumes/:perfumeId' element={<PerfumeDetails />} />
           </>
         ) : (
           <Route path='/' element={<Landing />}/>
