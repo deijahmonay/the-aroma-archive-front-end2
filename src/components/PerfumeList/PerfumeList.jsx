@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 const PerfumeList = (props) => {
   return (
-    <main>
+    
+    <main><h2>Aroma Archive - All Of Your Fragrances</h2>
       {props.perfumes.map((perfume) => (
         <Link key={perfume._id} to={`/perfumes/${perfume._id}`}>
           <article>
