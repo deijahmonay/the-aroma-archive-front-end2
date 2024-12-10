@@ -21,8 +21,11 @@ const SignupForm = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    updateMessage('');
-    console.log(formData); 
+    try {
+
+    }catch(err) {
+
+    }
   };
 
   const { username, email, password, passwordConf } = formData;
