@@ -49,13 +49,29 @@ const SigninForm = () => {
         </div>
         <div>
           <label htmlFor="email">Email:</label>
-          <input />
+          <input 
+          type="text"
+          autoComplete="off"
+          id="email"
+          value={formData.email}
+          name="email"
+          onChange={handleChange}
+          />
         </div>
         <div>
           <label htmlFor="password">Password:</label>
-          <input />
+          <input 
+          type="text"
+          autoComplete="off"
+          id="password"
+          value={formData.password}
+          name="password"
+          onChange={handleChange}
+          />
         </div>
       </form>
     </main>
   )
 }
+
+export default SigninForm
