@@ -10,4 +10,13 @@ const SigninForm = () => {
     email: '',
     password: '',
   })
+
+  const updateMessage = (msg) => {
+    setMessage(msg)
+  }
+
+  const handleChange = (e) => {
+    updateMessage('')
+    setFormData({...formData, [e.target.name]: e.target.value })
+  }
 }
