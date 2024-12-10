@@ -6,6 +6,7 @@ import Landing from './components/Landing/Landing';
 import SignupForm from './components/SignupForm/SignupForm';
 import SigninForm from './components/SigninForm/SigninForm';
 import * as authService from './services/authService'
+import PerfumeList from './components/PerfumeList/PerfumeList';
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -20,7 +21,10 @@ const App = () => {
       <NavBar user={user} handleSignout={handleSignout}/>
       <Routes>
         { user ? (
+          <>
           <Route path='/' element={<Dashboard user={user}/>}/>
+          <Route path='/perfumes' element={<PerfumeList />} />
+          </>
         ) : (
           <Route path='/' element={<Landing />}/>
         )}
