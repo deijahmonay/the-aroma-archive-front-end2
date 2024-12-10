@@ -22,9 +22,10 @@ const SignupForm = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
+        props.setUser(formData)
+        navigate('/')
     }catch(err) {
-
+        updateMessage(err.message)
     }
   };
 
