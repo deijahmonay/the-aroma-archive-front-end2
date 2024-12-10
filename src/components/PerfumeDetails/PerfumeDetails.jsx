@@ -30,6 +30,7 @@ const PerfumeDetails = (props) => {
       <h2>{perfume.name} Details:</h2>
       <p>Cost: ${perfume.cost}</p>
       <p>Length of Wear: {perfume.duration}</p>
+      <p>Status: {perfume.wantOwnStatus}</p>
       </section>
       <section>
         <h2>Key Notes:</h2>

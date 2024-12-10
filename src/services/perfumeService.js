@@ -38,4 +38,4 @@ const create = async (perfumeFormData) => {
   }
 };
 
-export { index, show, }
+export { index, show, create }
