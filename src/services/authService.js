@@ -14,9 +14,8 @@ const signup = async (formData) => {
     }
     if (json.token) {
       localStorage.setItem('token', json.token)
-      const user = JSON.parse(atob(json.token.split('.')[1]));
-      return user
     }
+    return json
   } catch (err) {
     console.log(err);
     throw err;
