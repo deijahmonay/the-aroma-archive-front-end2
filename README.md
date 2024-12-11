@@ -15,6 +15,9 @@
 > 
 ![Screenshot 2024-11-24 at 7 15 35 PM](https://media.git.generalassemb.ly/user/53181/files/f28e8bbd-e645-497c-a464-81e18ac96861)
 
+## Deployed Sites
+![Front Deployed](https://aroma-archive.netlify.app/)
+![Back Deployed](https://the-aroma-archive-aaad6c23eac6.herokuapp.com/)
 
 ## ERD
 > 
