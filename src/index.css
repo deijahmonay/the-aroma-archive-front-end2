@@ -19,7 +19,7 @@ h2 {
   font-weight: 900;
   margin-bottom: 0.5em;
   color: #a0135d;
-  font-family: "Parisienne", cursive;
+  font-family: "Parisienne";
 }
 
 p {
@@ -32,6 +32,7 @@ p {
 
 button {
   margin-top: 2rem;
+  margin-left: 2px;
   padding: 1em 1.5em;
   background-color: #e91e63;
   color: #fff;

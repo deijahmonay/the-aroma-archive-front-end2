@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../../app.css'; // Import your styles
+import '../../app.css'
 
 const NavBar = ({ user, handleSignout }) => {
   return (

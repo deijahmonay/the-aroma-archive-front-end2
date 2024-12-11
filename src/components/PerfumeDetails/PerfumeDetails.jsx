@@ -14,38 +14,37 @@ const PerfumeDetails = ({ handleDeletePerfume }) => {
       setPerfume(perfumeData);
     };
     fetchPerfume()
-  }, [perfumeId])
+  }, [perfumeId]);
 
-  if (!perfume) return <main>Loading...</main>
+  if (!perfume) return <main>Loading...</main>;
 
   return (
-    <main>
-      <header>
+    <main className="perfume-details">
+      <header className="details-header">
         <h1>{perfume.name}</h1>
         <p>
           Added by {perfume.author?.username || 'Unknown'} on{' '}
           {new Date(perfume.createdAt).toLocaleDateString()}
         </p>
         {perfume.author._id === user._id && (
-          <>
+          <div className="actions">
             <Link to={`/perfumes/${perfumeId}/edit`}>🌸Edit🌸</Link>  
-            <br />
             <button onClick={() => handleDeletePerfume(perfumeId)}>Delete</button>
-          </>
+          </div>
         )}
       </header>
-      <section>
-        <h2>{perfume.name} Details:</h2>
+      <section className="perfume-section">
+        <h2>Details:</h2>
         <p>Cost: ${perfume.cost}</p>
         <p>Length of Wear: {perfume.duration}</p>
         <p>Status: {perfume.wantOwnStatus}</p>
       </section>
-      <section>
+      <section className="perfume-section">
         <h2>Key Notes:</h2>
         {perfume.keynotes.length ? (
-          <ul>
+          <ul className="keynotes-list">
             {perfume.keynotes.map((keyNote, index) => (
-              <li key={index}>
+              <li key={index} className="keynote-item">
                 {keyNote.note} ({keyNote.type}) - Added by {keyNote.author?.username || 'Unknown'} on{' '}
                 {new Date(keyNote.createdAt).toLocaleDateString()}
               </li>
