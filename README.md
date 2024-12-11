@@ -1,18 +1,15 @@
 # The Aroma Archive
-![Uploading Screenshot 2024-12-10 at 6.03.46 PM.png…]()
 
+![AROMA Archive Image](https://files.oaiusercontent.com/file-7Sm1ZVWzn4cB1WafRHAyWd?se=2024-12-11T07%3A29%3A05Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D3926de48-cd12-478e-942f-4d5679e94109.webp&sig=rNl8pO0aNEqlotc%2BzAFgCOIcONGdGLNS%2BXAJwGIfwWQ%3D)
 
-### Film Fest - A Movie Tracker App
-An app that allows users to track movies they've already watched and want to watch in one place. This app is designed to help users keep track of any and all movies as the world becomes more streamlined and digital, they won't have to worry about forgetting their favorite movie.
-
-
-## Getting Started
-[Aroma Archive - Your Personal Perfume Vault ]()
-
-### Planning Materials
-[Trello Planning Materials](https://trello.com/invite/b/66f9f5a145890660a4d09965/ATTIf8dc16b9efaa409dc47cdb9d5260e4a713A72C63/unit-2-project-tracker)
 ## Project Description
 > A perfume management app for users to track and organize their fragrance collections. Add, edit, and manage perfumes with details like key notes, brand, cost, and Want/Own status.
+
+## Getting Started
+[Official front-end](https://github.com/deijahmonay/the-aroma-archive-front-end2.git)
+[Init front-end](https://github.com/deijahmonay/the-aroma-archive-front-end2.git)
+[Back-end repo](https://github.com/deijahmonay/the-aroma-archive-back-end.git)
+
 
 ## Wire Frames
 > 
@@ -69,19 +66,19 @@ An app that allows users to track movies they've already watched and want to wat
 * [MongoDB Docs](https://www.mongodb.com/docs/manual/reference/operator/query/or/)
 * [Stackoverflow](https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax)
 
-* Image: "Fim Fest NEM STACK x AMC"
+* Image: "The Aroma Archive"
     Created by: OpenAI
-    Date: October 2nd 2024
+    Date: December 10th 2024
 
 ### Technologies Used
-* CSS
-* EJS
-* Node.js
-* JavaScript
 * MongoDB
+* Mongoose
+* React-router-dom
+* Bcyrpt
+* React-Router-Dom
 * Dotenv
 * Morgan
 * Bcrypt
-*  Heroku
+* Heroku
 * React
 * Trello
