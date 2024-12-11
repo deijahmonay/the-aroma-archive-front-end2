@@ -68,6 +68,7 @@
 * [SuperSimpleDevCSS](https://www.youtube.com/watch?v=G3e-cpL7ofc)
 * [MongoDB Docs](https://www.mongodb.com/docs/manual/reference/operator/query/or/)
 * [Stackoverflow](https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax)
+* [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?utm_source=chatgpt.com)
 
 * Image: "The Aroma Archive"
     Created by: OpenAI

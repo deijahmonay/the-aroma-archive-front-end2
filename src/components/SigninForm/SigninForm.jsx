@@ -45,6 +45,7 @@ const SigninForm = (props) => {
           value={formData.username}
           name="username"
           onChange={handleChange}
+          placeholder='Username here'
           />
         </div>
         <div>
@@ -56,6 +57,7 @@ const SigninForm = (props) => {
           value={formData.email}
           name="email"
           onChange={handleChange}
+          placeholder='Email here'
           />
         </div>
         <div>
@@ -67,12 +69,13 @@ const SigninForm = (props) => {
           value={formData.password}
           name="password"
           onChange={handleChange}
+          placeholder="password here"
           />
         </div>
         <div>
-          <button>Sign In</button>
+            <button>Sign In</button>
           <Link to='/'>
-          <button>Cancel</button>
+            <button>Cancel</button>
           </Link>
         </div>
       </form>

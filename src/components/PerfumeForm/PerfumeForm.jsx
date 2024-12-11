@@ -156,7 +156,7 @@ const PerfumeForm = ({ handleAddPerfume, handleUpdatePerfume }) => {
           ))}
         </ul>
         <hr />
-        <button type="submit">SUBMIT</button>
+      <button type="submit">SUBMIT</button>
       </form>
     </main>
   );
