@@ -1,96 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  align-items: center;
-  min-height: 100vh;
-}
-
 
 .navbar {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 1rem 2rem;
-  background: linear-gradient(90deg, #f8bbd0, #f3e5f5); 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  border-radius: 12px; 
+  background-color: #f8bbd0; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .navbar-logo {
-  font-size: 1.8em;
-  font-weight: 700;
-  color: #c2185b; 
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #a0135d; 
   text-decoration: none;
 }
 
 .navbar-logo:hover {
-  color: #ad1457; 
+  color: #860c47;
 }
-
 
 .navbar-links {
   display: flex;
-  gap: 1.5rem; 
+  gap: 1rem;
+  list-style: none;
+}
+
+.navbar-links li {
+  list-style: none;
 }
 
 .navbar-links a {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 600;
   color: #4a4a4a; 
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
   color: #d81b60;
 }
 
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem; 
-  width: 100%;
-  padding: 2rem;
-}
-
-@media (min-width: 768px) {
-  .main-content {
-    flex-direction: row;
-    justify-content: space-evenly; 
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
-}
 
-.card {
-  padding: 2em;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  text-align: center;
-}
-
-button {
-  padding: 0.8em 1.5em;
-  background-color: #d81b60;
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  font-size: 1.3em;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-  background-color: #ad1457;
-  transform: scale(1.05);
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }

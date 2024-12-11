@@ -4,85 +4,71 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f3e5f5);
+  background: linear-gradient(135deg, #ffe4f1, #fcb0d9, #f7e6fb);
   color: #333;
-  font-family: "Inter", Arial, sans-serif; 
-  font-size: 18px; 
-  font-weight: 600; 
+  font-family: "Lora", serif;
+  font-size: 20px;
+  font-weight: 800;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h2 {
-  font-size: 2.4em; 
-  font-weight: 700; 
+  font-size: 2.8em;
+  font-weight: 900;
   margin-bottom: 0.5em;
-  color: #c2185b; 
+  color: #a0135d;
+  font-family: "Parisienne", cursive;
 }
 
 p {
-  font-size: 1.4em; 
-  line-height: 1.8; 
+  font-size: 1.6em;
+  line-height: 2;
   margin: 0.5em 0;
-  color: #4a4a4a; 
+  color: #4a4a4a;
+  font-weight: 700;
 }
 
 button {
-  margin-top: 2px;
-  padding: 0.8em 1.5em;
-  background-color: #d81b60; 
-  border-color: white;
-  color: #fff; 
+  margin-top: 2rem;
+  padding: 1em 1.5em;
+  background-color: #e91e63;
+  color: #fff;
+  border: none;
   border-radius: 12px;
-  font-size: 1.3em; 
-  font-weight: 700;
+  font-size: 1.5em;
+  font-weight: 900;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
   transform: scale(1.05);
-  background-color: #ad1457; 
+  background-color: #c2185b;
 }
 
 a {
-  color: #c2185b;
-  font-weight: 600;
+  color: #a0135d;
+  font-weight: 800;
   text-decoration: none;
 }
 
 a:hover {
-  color: #880e4f; 
+  color: #860c47;
 }
 
 .card {
-  padding: 2.5em;
-  background: rgba(255, 255, 255, 0.95); 
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-  max-width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 3em;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  font-family: "Lora", serif;
+  font-weight: 800;
   text-align: center;
-}
-
-
-@media (min-width: 768px) {
-  body {
-    font-size: 20px;
-  }
-
-  h2 {
-    font-size: 2.8em;
-  }
-
-  p {
-    font-size: 1.6em;
-  }
-
-  button {
-    font-size: 1.5em;
-  }
 }
