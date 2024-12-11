@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import * as perfumeService from '../../services/perfumeService';
 
-const PerfumeForm = (props) => {
+const PerfumeForm = ({ handleAddPerfume, handleUpdatePerfume }) => {
+  const { perfumeId } = useParams();
   const [formData, setFormData] = useState({
     name: '',
     brand: '',
@@ -15,12 +18,22 @@ const PerfumeForm = (props) => {
     type: 'Top Note',
   });
 
+  useEffect(() => {
+    const fetchPerfume = async () => {
+      if (perfumeId) {
+        const perfumeData = await perfumeService.show(perfumeId);
+        setFormData(perfumeData)
+      }
+    };
+    fetchPerfume()
+  }, [perfumeId])
+
   const handleChange = (evt) => {
-    setFormData({ ...formData, [evt.target.name]: evt.target.value });
+    setFormData({ ...formData, [evt.target.name]: evt.target.value })
   };
 
   const handleKeynoteChange = (evt) => {
-    setKeynote({ ...keynote, [evt.target.name]: evt.target.value });
+    setKeynote({ ...keynote, [evt.target.name]: evt.target.value })
   };
 
   const addKeynote = () => {
@@ -36,12 +49,17 @@ const PerfumeForm = (props) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    props.handleAddPerfume(formData)
+    if (perfumeId) {
+      handleUpdatePerfume(perfumeId, formData);
+    } else {
+      handleAddPerfume(formData);
+    }
   };
 
   return (
     <main>
       <form onSubmit={handleSubmit}>
+        <h1>{perfumeId ? 'Edit Perfume' : 'New Perfume'}</h1>
         <label htmlFor="name-input">Perfume Name</label>
         <input
           required
@@ -49,8 +67,8 @@ const PerfumeForm = (props) => {
           name="name"
           id="name-input"
           value={formData.name}
-          onChange={handleChange} />
-
+          onChange={handleChange}
+        />
         <label htmlFor="brand-input">Brand</label>
         <input
           required
@@ -60,7 +78,6 @@ const PerfumeForm = (props) => {
           value={formData.brand}
           onChange={handleChange}
         />
-
         <label htmlFor="cost-input">Cost (USD)</label>
         <input
           required
@@ -71,8 +88,7 @@ const PerfumeForm = (props) => {
           value={formData.cost}
           onChange={handleChange}
         />
-
-        <label htmlFor="duration-input">Duration</label>
+        <label htmlFor="duration-input">Duration of Wear:</label>
         <select
           required
           name="duration"
@@ -107,10 +123,10 @@ const PerfumeForm = (props) => {
           onChange={handleKeynoteChange}
         >
           {[
-            'Vanilla', 'Citrus', 'Lavender', 'Amber', 'Sandalwood', 'Rose',
-            'Patchouli', 'Jasmine', 'Musk', 'Bergamot', 'Orange', 'Cedarwood',
-            'Peach', 'Coconut', 'Chocolate', 'Pineapple', 'Mint', 'Tobacco',
-            'Leather', 'Honey', 'Fruity', 'Apple', 'Cherry', 'Fig', 'Oud'
+            'Vanilla', 'Citrus', 'Lavender', 'Amber', 'Sandalwood', 'Rose', 'Patchouli',
+            'Jasmine', 'Musk', 'Bergamot', 'Orange', 'Cedarwood', 'Peach', 'Coconut',
+            'Chocolate', 'Pineapple', 'Mint', 'Tobacco', 'Leather', 'Honey', 'Fruity',
+            'Apple', 'Cherry', 'Fig', 'Oud'
           ].map((note) => (
             <option key={note} value={note}>
               {note}
@@ -143,7 +159,7 @@ const PerfumeForm = (props) => {
         <button type="submit">SUBMIT</button>
       </form>
     </main>
-  )
-}
+  );
+};
 
-export default PerfumeForm
+export default PerfumeForm;
